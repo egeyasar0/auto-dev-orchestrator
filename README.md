@@ -1,6 +1,6 @@
 # auto-dev-orchestrator
 
-![auto-dev-orchestrator banner](docs/assets/banner.svg)
+[![auto-dev-orchestrator banner](docs/assets/banner.svg)](docs/architecture.md)
 
 Local-first supervisor-worker orchestration for coding agents.
 
@@ -13,15 +13,15 @@ Local-first supervisor-worker orchestration for coding agents.
 
 ## Screenshots
 
-![auto-dev status](docs/assets/screenshots/status.svg)
+[![auto-dev status](docs/assets/screenshots/status.svg)](docs/assets/screenshots/status.svg)
 
 [View status screenshot](docs/assets/screenshots/status.svg)
 
-![auto-dev plan](docs/assets/screenshots/plan.svg)
+[![auto-dev plan](docs/assets/screenshots/plan.svg)](docs/assets/screenshots/plan.svg)
 
 [View plan screenshot](docs/assets/screenshots/plan.svg)
 
-![auto-dev run artifacts](docs/assets/screenshots/artifacts.svg)
+[![auto-dev run artifacts](docs/assets/screenshots/artifacts.svg)](docs/assets/screenshots/artifacts.svg)
 
 [View run artifacts screenshot](docs/assets/screenshots/artifacts.svg)
 
@@ -52,7 +52,7 @@ flowchart LR
   Prompt --> Provider["CodingAgentProvider"]
   Provider --> Codex["CodexProvider"]
   Codex --> CLI["Codex CLI"]
-  CLI --> Artifacts[".agent/runs/&lt;timestamp&gt;"]
+  CLI --> Artifacts[".agent/runs/{timestamp}"]
   Artifacts --> Review["Deterministic Review"]
   Review --> Supervisor
 ```
@@ -194,15 +194,15 @@ Kodlama ajanları için yerel öncelikli supervisor-worker orkestrasyonu.
 
 ## Ekran Görüntüleri
 
-![auto-dev status](docs/assets/screenshots/status.svg)
+[![auto-dev status](docs/assets/screenshots/status.svg)](docs/assets/screenshots/status.svg)
 
 [Durum ekran görüntüsünü aç](docs/assets/screenshots/status.svg)
 
-![auto-dev plan](docs/assets/screenshots/plan.svg)
+[![auto-dev plan](docs/assets/screenshots/plan.svg)](docs/assets/screenshots/plan.svg)
 
 [Plan ekran görüntüsünü aç](docs/assets/screenshots/plan.svg)
 
-![auto-dev çalışma artefaktları](docs/assets/screenshots/artifacts.svg)
+[![auto-dev çalışma artefaktları](docs/assets/screenshots/artifacts.svg)](docs/assets/screenshots/artifacts.svg)
 
 [Çalışma artefaktları ekran görüntüsünü aç](docs/assets/screenshots/artifacts.svg)
 

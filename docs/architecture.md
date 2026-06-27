@@ -11,7 +11,7 @@ flowchart LR
   Prompt --> Interface["CodingAgentProvider"]
   Interface --> CodexProvider["CodexProvider"]
   CodexProvider --> CodexCLI["Codex CLI"]
-  CodexCLI --> Artifacts[".agent/runs/&lt;timestamp&gt;"]
+  CodexCLI --> Artifacts[".agent/runs/{timestamp}"]
   Artifacts --> Tests["Tests"]
   Tests --> Review["Deterministic Review"]
   Review --> Supervisor

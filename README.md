@@ -7,6 +7,7 @@ Local-first supervisor-worker orchestration for coding agents.
 `auto-dev` turns a manual "supervisor reviews worker output" coding workflow into a small, safety-first CLI. It uses a provider-agnostic supervisor layer, with Codex CLI as the first worker provider and room for Claude Code, Gemini CLI, or other agents later.
 
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
+![Tests](https://github.com/egeyasar0/auto-dev-orchestrator/actions/workflows/tests.yml/badge.svg)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Dependencies](https://img.shields.io/badge/dependencies-stdlib--only-lightgrey)
 

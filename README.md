@@ -6,18 +6,24 @@ Local-first supervisor-worker orchestration for coding agents.
 
 `auto-dev` turns a manual "supervisor reviews worker output" coding workflow into a small, safety-first CLI. It uses a provider-agnostic supervisor layer, with Codex CLI as the first worker provider and room for Claude Code, Gemini CLI, or other agents later.
 
-![Python](https://img.shields.io/badge/python-3.11%2B-blue)
-![Tests](https://github.com/egeyasar0/auto-dev-orchestrator/actions/workflows/tests.yml/badge.svg)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Dependencies](https://img.shields.io/badge/dependencies-stdlib--only-lightgrey)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](pyproject.toml)
+[![Tests](https://github.com/egeyasar0/auto-dev-orchestrator/actions/workflows/tests.yml/badge.svg)](https://github.com/egeyasar0/auto-dev-orchestrator/actions/workflows/tests.yml)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Dependencies](https://img.shields.io/badge/dependencies-stdlib--only-lightgrey)](pyproject.toml)
 
 ## Screenshots
 
 ![auto-dev status](docs/assets/screenshots/status.svg)
 
+[View status screenshot](docs/assets/screenshots/status.svg)
+
 ![auto-dev plan](docs/assets/screenshots/plan.svg)
 
+[View plan screenshot](docs/assets/screenshots/plan.svg)
+
 ![auto-dev run artifacts](docs/assets/screenshots/artifacts.svg)
+
+[View run artifacts screenshot](docs/assets/screenshots/artifacts.svg)
 
 Screenshots are generated from sanitized local CLI output. They do not include private paths, tokens, or run artifacts.
 
@@ -40,14 +46,14 @@ The supervisor owns orchestration. The worker provider owns provider-specific co
 
 ```mermaid
 flowchart LR
-  User[User] --> Supervisor[Supervisor]
-  Supervisor --> Router[Risk / Reasoning Router]
-  Router --> Prompt[Prompt Builder]
-  Prompt --> Provider[CodingAgentProvider]
-  Provider --> Codex[CodexProvider]
-  Codex --> CLI[Codex CLI]
-  CLI --> Artifacts[.agent/runs/<timestamp>]
-  Artifacts --> Review[Deterministic Review]
+  User["User"] --> Supervisor["Supervisor"]
+  Supervisor --> Router["Risk / Reasoning Router"]
+  Router --> Prompt["Prompt Builder"]
+  Prompt --> Provider["CodingAgentProvider"]
+  Provider --> Codex["CodexProvider"]
+  Codex --> CLI["Codex CLI"]
+  CLI --> Artifacts[".agent/runs/&lt;timestamp&gt;"]
+  Artifacts --> Review["Deterministic Review"]
   Review --> Supervisor
 ```
 
@@ -190,9 +196,15 @@ Kodlama ajanları için yerel öncelikli supervisor-worker orkestrasyonu.
 
 ![auto-dev status](docs/assets/screenshots/status.svg)
 
+[Durum ekran görüntüsünü aç](docs/assets/screenshots/status.svg)
+
 ![auto-dev plan](docs/assets/screenshots/plan.svg)
 
+[Plan ekran görüntüsünü aç](docs/assets/screenshots/plan.svg)
+
 ![auto-dev çalışma artefaktları](docs/assets/screenshots/artifacts.svg)
+
+[Çalışma artefaktları ekran görüntüsünü aç](docs/assets/screenshots/artifacts.svg)
 
 Ekran görüntüleri temizlenmiş yerel CLI çıktılarından üretilmiştir. Özel path, token veya çalışma artefaktı içermez.
 

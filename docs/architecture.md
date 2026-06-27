@@ -4,16 +4,16 @@
 
 ```mermaid
 flowchart LR
-  User[User] --> Supervisor[Supervisor]
-  Supervisor --> Inspector[Repository Inspector]
-  Inspector --> Router[Risk / Reasoning Router]
-  Router --> Prompt[Prompt Builder]
-  Prompt --> Interface[CodingAgentProvider]
-  Interface --> CodexProvider[CodexProvider]
-  CodexProvider --> CodexCLI[Codex CLI]
-  CodexCLI --> Artifacts[.agent/runs/<timestamp>]
-  Artifacts --> Tests[Tests]
-  Tests --> Review[Deterministic Review]
+  User["User"] --> Supervisor["Supervisor"]
+  Supervisor --> Inspector["Repository Inspector"]
+  Inspector --> Router["Risk / Reasoning Router"]
+  Router --> Prompt["Prompt Builder"]
+  Prompt --> Interface["CodingAgentProvider"]
+  Interface --> CodexProvider["CodexProvider"]
+  CodexProvider --> CodexCLI["Codex CLI"]
+  CodexCLI --> Artifacts[".agent/runs/&lt;timestamp&gt;"]
+  Artifacts --> Tests["Tests"]
+  Tests --> Review["Deterministic Review"]
   Review --> Supervisor
 ```
 

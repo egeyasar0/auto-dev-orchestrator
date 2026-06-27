@@ -59,6 +59,14 @@ def run_plan(root: Path, task: str) -> tuple[RunPaths, str, str]:
     result = provider(config).plan(prompt, root, run.plan_output, effort)
     if not run.plan_output.exists():
         run.plan_output.write_text(result.last_message, encoding="utf-8")
+    if result.command.returncode != 0:
+        recommendation = "BLOCKED: provider command failed."
+        run.plan_review.write_text(recommendation + "\n", encoding="utf-8")
+        print(run.plan_output.read_text(encoding="utf-8", errors="ignore"))
+        print("\n--- deterministic review ---")
+        print(recommendation)
+        print(f"\nRun artifacts: {run.root}")
+        return run, run.plan_output.read_text(encoding="utf-8", errors="ignore"), recommendation
     plan_text = run.plan_output.read_text(encoding="utf-8", errors="ignore")
     recommendation = review_plan(plan_text, risk, config.auto_approve_low_risk_plan)
     run.plan_review.write_text(recommendation + "\n", encoding="utf-8")
@@ -139,4 +147,3 @@ def status(root: Path) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

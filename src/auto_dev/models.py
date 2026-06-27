@@ -13,7 +13,7 @@ SandboxMode = Literal["read-only", "workspace-write"]
 @dataclass(frozen=True)
 class CodexConfig:
     command: str = "codex"
-    model: str = "gpt-5-codex"
+    model: str | None = None
     reasoning_effort_config_key: str = "model_reasoning_effort"
 
 
@@ -80,4 +80,3 @@ class CommandResult:
 class AgentResult:
     command: CommandResult
     last_message: str
-

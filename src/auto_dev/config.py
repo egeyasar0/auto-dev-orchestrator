@@ -30,7 +30,7 @@ def load_config(project_root: Path) -> AppConfig:
         providers={
             "codex": CodexConfig(
                 command=str(codex_data.get("command", "codex")),
-                model=str(codex_data.get("model", "gpt-5-codex")),
+                model=str(codex_data["model"]) if "model" in codex_data else None,
                 reasoning_effort_config_key=str(
                     codex_data.get("reasoning_effort_config_key", "model_reasoning_effort")
                 ),
@@ -59,4 +59,3 @@ def _effort(value: Any) -> ReasoningEffort:
     if value not in VALID_EFFORTS:
         raise ValueError(f"invalid reasoning effort: {value!r}")
     return value
-

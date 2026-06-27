@@ -9,12 +9,18 @@ from auto_dev.providers.codex import CodexProvider
 
 class CodexProviderTests(unittest.TestCase):
     def test_builds_read_only_plan_command(self) -> None:
-        provider = CodexProvider(CodexConfig(reasoning_effort_config_key="reasoning.effort"))
+        provider = CodexProvider(CodexConfig(model="gpt-test", reasoning_effort_config_key="reasoning.effort"))
         command = provider.build_command(Path("repo"), Path("out.md"), "high", "read-only")
         self.assertIn("codex", command)
         self.assertIn("exec", command)
+        self.assertIn("gpt-test", command)
         self.assertIn("read-only", command)
         self.assertIn('reasoning.effort="high"', command)
+
+    def test_omits_model_when_not_configured(self) -> None:
+        provider = CodexProvider(CodexConfig())
+        command = provider.build_command(Path("repo"), Path("out.md"), "medium", "read-only")
+        self.assertNotIn("--model", command)
 
     def test_plan_can_skip_git_repo_check(self) -> None:
         provider = CodexProvider(CodexConfig())

@@ -38,14 +38,14 @@ class CodexProvider:
             sandbox,
             "--cd",
             str(project_root),
-            "--model",
-            self.config.model,
             "--config",
             f'{self.config.reasoning_effort_config_key}="{effort}"',
             "--output-last-message",
             str(output_file),
             "-",
         ]
+        if self.config.model:
+            command[6:6] = ["--model", self.config.model]
         if skip_git_repo_check:
             command.insert(-1, "--skip-git-repo-check")
         return command

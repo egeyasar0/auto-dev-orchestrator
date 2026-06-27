@@ -1,0 +1,18 @@
+default_provider = "codex"
+default_reasoning_effort = "medium"
+max_fix_attempts = 2
+require_clean_git = true
+auto_approve_low_risk_plan = true
+
+[providers.codex]
+command = "codex"
+# model = "your-codex-compatible-model"
+reasoning_effort_config_key = "model_reasoning_effort"
+
+[safety]
+allow_yolo = false
+allow_network = false
+require_user_approval_for_dependencies = true
+require_user_approval_for_security_changes = true
+require_user_approval_for_db_migrations = true
+require_user_approval_for_deploy_changes = true

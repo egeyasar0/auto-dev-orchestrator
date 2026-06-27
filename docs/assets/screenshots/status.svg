@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360" role="img" aria-labelledby="title desc">
+  <title id="title">auto-dev status terminal screenshot</title>
+  <desc id="desc">Sanitized terminal output for auto-dev status.</desc>
+  <rect width="920" height="360" rx="16" fill="#111827"/>
+  <rect x="0" y="0" width="920" height="48" rx="16" fill="#1f2937"/>
+  <circle cx="28" cy="24" r="6" fill="#f87171"/>
+  <circle cx="48" cy="24" r="6" fill="#fbbf24"/>
+  <circle cx="68" cy="24" r="6" fill="#34d399"/>
+  <text x="88" y="30" font-family="Consolas, Menlo, Monaco, monospace" font-size="14" fill="#d1d5db">auto-dev status</text>
+  <text x="32" y="84" font-family="Consolas, Menlo, Monaco, monospace" font-size="17" fill="#93c5fd">$ PYTHONPATH=src python -m auto_dev status</text>
+  <text x="32" y="122" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">project root: &lt;project-root&gt;</text>
+  <text x="32" y="150" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">git repo: yes</text>
+  <text x="32" y="178" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">branch: master</text>
+  <text x="32" y="206" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">dirty: yes</text>
+  <text x="32" y="234" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#fcd34d">warning: current branch is main/master</text>
+  <text x="32" y="262" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">config: no</text>
+  <text x="32" y="290" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">latest run: &lt;project-root&gt;/.agent/runs/&lt;timestamp&gt;</text>
+  <text x="32" y="318" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">project types: python</text>
+</svg>

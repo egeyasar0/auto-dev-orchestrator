@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="360" viewBox="0 0 820 360" role="img" aria-labelledby="title desc">
+  <title id="title">auto-dev run artifacts terminal screenshot</title>
+  <desc id="desc">Sanitized file list for an auto-dev plan run artifact directory.</desc>
+  <rect width="820" height="360" rx="16" fill="#111827"/>
+  <rect x="0" y="0" width="820" height="48" rx="16" fill="#1f2937"/>
+  <circle cx="28" cy="24" r="6" fill="#f87171"/>
+  <circle cx="48" cy="24" r="6" fill="#fbbf24"/>
+  <circle cx="68" cy="24" r="6" fill="#34d399"/>
+  <text x="88" y="30" font-family="Consolas, Menlo, Monaco, monospace" font-size="14" fill="#d1d5db">run artifacts</text>
+  <text x="32" y="84" font-family="Consolas, Menlo, Monaco, monospace" font-size="17" fill="#93c5fd">$ tree .agent/runs/&lt;timestamp&gt;</text>
+  <text x="32" y="126" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">.agent/runs/&lt;timestamp&gt;/</text>
+  <text x="32" y="154" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">|-- user_request.txt</text>
+  <text x="32" y="182" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">|-- repo_context.json</text>
+  <text x="32" y="210" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">|-- generated_prompt.md</text>
+  <text x="32" y="238" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">|-- plan_output.md</text>
+  <text x="32" y="266" font-family="Consolas, Menlo, Monaco, monospace" font-size="16" fill="#e5e7eb">`-- plan_review.md</text>
+  <text x="32" y="316" font-family="Consolas, Menlo, Monaco, monospace" font-size="15" fill="#9ca3af">Sanitized example. Actual .agent/runs/ directories are ignored.</text>
+</svg>

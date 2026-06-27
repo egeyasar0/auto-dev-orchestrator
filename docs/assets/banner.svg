@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">auto-dev-orchestrator banner</title>
+  <desc id="desc">A clean banner for the auto-dev-orchestrator project.</desc>
+  <rect width="1200" height="360" rx="28" fill="#0f172a"/>
+  <path d="M80 255 C210 120 330 280 460 140 S720 110 850 225 S1060 240 1120 120" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+  <rect x="82" y="72" width="280" height="132" rx="16" fill="#111827" stroke="#334155"/>
+  <rect x="418" y="72" width="280" height="132" rx="16" fill="#111827" stroke="#334155"/>
+  <rect x="754" y="72" width="280" height="132" rx="16" fill="#111827" stroke="#334155"/>
+  <text x="122" y="126" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#e5e7eb">Supervisor</text>
+  <text x="458" y="126" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#e5e7eb">Provider</text>
+  <text x="794" y="126" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#e5e7eb">Worker CLI</text>
+  <text x="122" y="164" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#94a3b8">risk + prompt + review</text>
+  <text x="458" y="164" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#94a3b8">clean agent boundary</text>
+  <text x="794" y="164" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#94a3b8">Codex today</text>
+  <text x="80" y="304" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="800" fill="#f8fafc">auto-dev-orchestrator</text>
+  <text x="650" y="304" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#cbd5e1">local-first coding-agent automation</text>
+</svg>

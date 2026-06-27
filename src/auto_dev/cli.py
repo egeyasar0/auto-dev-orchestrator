@@ -31,8 +31,8 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "status":
         return status(root)
     if args.command == "plan":
-        run_plan(root, args.task)
-        return 0
+        _, _, recommendation = run_plan(root, args.task)
+        return 2 if is_blocked(recommendation) else 0
     if args.command == "run":
         return run_task(root, args.task)
     if args.command == "review":
@@ -87,6 +87,9 @@ def run_task(root: Path, task: str) -> int:
 
     if not context.has_git:
         print("Blocked: this command requires a Git repository.", file=sys.stderr)
+        return 2
+    if is_blocked(recommendation):
+        print(recommendation, file=sys.stderr)
         return 2
     dirty = dirty_outside_agent(root)
     if config.require_clean_git and dirty:
@@ -143,6 +146,10 @@ def status(root: Path) -> int:
     print(f"latest run: {latest or '-'}")
     print(f"project types: {', '.join(context.project_types) if context.project_types else '-'}")
     return 0
+
+
+def is_blocked(recommendation: str) -> bool:
+    return recommendation.startswith("BLOCKED:")
 
 
 if __name__ == "__main__":
